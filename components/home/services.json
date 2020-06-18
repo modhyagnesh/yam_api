@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_home_services",
+  "info": {
+    "name": "services",
+    "icon": "user-cog"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "serviceList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "services.skill-list"
+    }
+  }
+}

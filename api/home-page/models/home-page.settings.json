@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "name": "Home Page"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "banner": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.banner"
+    },
+    "about": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.about"
+    },
+    "meta": {
+      "type": "dynamiczone",
+      "components": [
+        "home.meta",
+        "home.counter",
+        "home.services",
+        "home.skills",
+        "home.portfolio"
+      ]
+    }
+  }
+}

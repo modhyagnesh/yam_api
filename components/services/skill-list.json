@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_skills_skill_lists",
+  "info": {
+    "name": "ServiceList",
+    "icon": "toolbox"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
