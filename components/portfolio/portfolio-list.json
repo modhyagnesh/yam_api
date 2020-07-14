@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_portfolio_portfolio_lists",
+  "info": {
+    "name": "PortfolioList",
+    "icon": "folder-open"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "portfolioLink": {
+      "type": "string"
+    },
+    "portfolioImages": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "web",
+        "mobile"
+      ]
+    }
+  }
+}

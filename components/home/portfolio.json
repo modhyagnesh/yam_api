@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_home_portfolios",
+  "info": {
+    "name": "Portfolio",
+    "icon": "passport"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "PortfolioList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "portfolio.portfolio-list"
+    }
+  }
+}

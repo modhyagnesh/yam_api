@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_home_counters",
+  "info": {
+    "name": "counter",
+    "icon": "sort-numeric-down"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    }
+  }
+}

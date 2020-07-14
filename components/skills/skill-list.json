@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_skills_skill_lists",
+  "info": {
+    "name": "skillList",
+    "icon": "business-time"
+  },
+  "options": {},
+  "attributes": {
+    "skillName": {
+      "type": "string"
+    },
+    "skillPercentage": {
+      "type": "string"
+    }
+  }
+}
