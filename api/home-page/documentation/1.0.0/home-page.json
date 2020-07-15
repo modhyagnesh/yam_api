@@ -756,6 +756,9 @@
                         },
                         "category": {
                           "type": "string"
+                        },
+                        "coverImage": {
+                          "type": "string"
                         }
                       }
                     }
@@ -1443,6 +1446,9 @@
                           "type": "string"
                         },
                         "category": {
+                          "type": "string"
+                        },
+                        "coverImage": {
                           "type": "string"
                         }
                       }

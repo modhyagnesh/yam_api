@@ -1,12 +1,12 @@
 {
   "paths": {
-    "/resume-page": {
+    "/contact-page": {
       "get": {
         "deprecated": false,
-        "description": "Find all the resume-page's records",
+        "description": "Find all the contact-page's records",
         "responses": {
           "200": {
-            "description": "Retrieve resume-page document(s)",
+            "description": "Retrieve contact-page document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Resume-page"
+          "Contact-page"
         ],
         "parameters": [
           {
@@ -195,10 +195,10 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single resume-page record",
+        "description": "Update a single contact-page record",
         "responses": {
           "200": {
-            "description": "Retrieve resume-page document(s)",
+            "description": "Retrieve contact-page document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Resume-page"
+          "Contact-page"
         ],
         "requestBody": {
           "description": "",
@@ -252,7 +252,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewResume-page"
+                "$ref": "#/components/schemas/NewContact-page"
               }
             }
           }
@@ -261,10 +261,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single resume-page record",
+        "description": "Delete a single contact-page record",
         "responses": {
           "200": {
-            "description": "deletes a single resume-page based on the ID supplied",
+            "description": "deletes a single contact-page based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -307,7 +307,7 @@
         },
         "summary": "",
         "tags": [
-          "Resume-page"
+          "Contact-page"
         ],
         "parameters": []
       }
@@ -315,7 +315,7 @@
   },
   "components": {
     "schemas": {
-      "Resume-page": {
+      "Contact-page": {
         "required": [
           "id"
         ],
@@ -387,71 +387,62 @@
           "content": {
             "type": "string"
           },
-          "buttonText": {
-            "type": "string"
+          "meta": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "key": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                }
+              }
+            }
           },
-          "resume": {
+          "address": {
+            "type": "object",
             "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
+              "id"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "name": {
+              "addressLine1": {
                 "type": "string"
               },
-              "alternativeText": {
+              "addressLine2": {
                 "type": "string"
               },
-              "caption": {
+              "city": {
                 "type": "string"
               },
-              "width": {
+              "state": {
+                "type": "string"
+              },
+              "country": {
+                "type": "string"
+              },
+              "zipcode": {
                 "type": "integer"
               },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
+              "latitude": {
                 "type": "number"
               },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
+              "longitude": {
+                "type": "number"
               }
             }
           },
-          "meta": {
+          "emails": {
             "type": "array",
             "items": {
               "type": "object",
@@ -462,26 +453,40 @@
                 "id": {
                   "type": "string"
                 },
-                "key": {
-                  "type": "string"
-                },
-                "value": {
+                "email": {
                   "type": "string"
                 }
               }
             }
           },
-          "buttonLink": {
+          "phoneNumbers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "phoneNumber": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
             "type": "string"
           }
         }
       },
-      "NewResume-page": {
+      "NewContact-page": {
         "properties": {
           "content": {
-            "type": "string"
-          },
-          "buttonText": {
             "type": "string"
           },
           "meta": {
@@ -504,7 +509,79 @@
               }
             }
           },
-          "buttonLink": {
+          "address": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "addressLine1": {
+                "type": "string"
+              },
+              "addressLine2": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "state": {
+                "type": "string"
+              },
+              "country": {
+                "type": "string"
+              },
+              "zipcode": {
+                "type": "integer"
+              },
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
+              }
+            }
+          },
+          "emails": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "phoneNumbers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "phoneNumber": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
             "type": "string"
           }
         }

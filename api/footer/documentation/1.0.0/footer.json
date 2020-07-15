@@ -1,19 +1,18 @@
 {
   "paths": {
-    "/resume-page": {
+    "/footer": {
       "get": {
         "deprecated": false,
-        "description": "Find all the resume-page's records",
+        "description": "Find all the footer's records",
         "responses": {
           "200": {
-            "description": "Retrieve resume-page document(s)",
+            "description": "Retrieve footer document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Footer"
                   }
                 }
               }
@@ -52,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Resume-page"
+          "Footer"
         ],
         "parameters": [
           {
@@ -195,18 +194,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single resume-page record",
+        "description": "Update a single footer record",
         "responses": {
           "200": {
-            "description": "Retrieve resume-page document(s)",
+            "description": "Retrieve footer document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Footer"
                 }
               }
             }
@@ -244,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Resume-page"
+          "Footer"
         ],
         "requestBody": {
           "description": "",
@@ -252,7 +247,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewResume-page"
+                "$ref": "#/components/schemas/NewFooter"
               }
             }
           }
@@ -261,10 +256,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single resume-page record",
+        "description": "Delete a single footer record",
         "responses": {
           "200": {
-            "description": "deletes a single resume-page based on the ID supplied",
+            "description": "deletes a single footer based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -307,7 +302,7 @@
         },
         "summary": "",
         "tags": [
-          "Resume-page"
+          "Footer"
         ],
         "parameters": []
       }
@@ -315,7 +310,7 @@
   },
   "components": {
     "schemas": {
-      "Resume-page": {
+      "Footer": {
         "required": [
           "id"
         ],
@@ -323,135 +318,10 @@
           "id": {
             "type": "string"
           },
-          "backgroundMedia": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              }
-            }
-          },
-          "content": {
+          "note": {
             "type": "string"
           },
-          "buttonText": {
-            "type": "string"
-          },
-          "resume": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              }
-            }
-          },
-          "meta": {
+          "socialLinks": {
             "type": "array",
             "items": {
               "type": "object",
@@ -462,29 +332,29 @@
                 "id": {
                   "type": "string"
                 },
-                "key": {
+                "iconName": {
                   "type": "string"
                 },
-                "value": {
+                "link": {
+                  "type": "string"
+                },
+                "label": {
                   "type": "string"
                 }
               }
             }
           },
-          "buttonLink": {
+          "copyrightText": {
             "type": "string"
           }
         }
       },
-      "NewResume-page": {
+      "NewFooter": {
         "properties": {
-          "content": {
+          "note": {
             "type": "string"
           },
-          "buttonText": {
-            "type": "string"
-          },
-          "meta": {
+          "socialLinks": {
             "type": "array",
             "items": {
               "type": "object",
@@ -495,21 +365,28 @@
                 "id": {
                   "type": "string"
                 },
-                "key": {
+                "iconName": {
                   "type": "string"
                 },
-                "value": {
+                "link": {
+                  "type": "string"
+                },
+                "label": {
                   "type": "string"
                 }
               }
             }
           },
-          "buttonLink": {
+          "copyrightText": {
             "type": "string"
           }
         }
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Footer"
+    }
+  ]
 }

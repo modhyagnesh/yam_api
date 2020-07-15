@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_home_social_links",
+  "info": {
+    "name": "socialLinks",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "iconName": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    }
+  }
+}

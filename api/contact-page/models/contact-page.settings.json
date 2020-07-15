@@ -1,8 +1,8 @@
 {
   "kind": "singleType",
-  "collectionName": "resume_pages",
+  "collectionName": "contact_pages",
   "info": {
-    "name": "ResumePage"
+    "name": "contact-page"
   },
   "options": {
     "increments": true,
@@ -22,25 +22,31 @@
     "content": {
       "type": "richtext"
     },
-    "buttonText": {
-      "type": "string"
-    },
-    "resume": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "files"
-      ],
-      "plugin": "upload",
-      "required": false
-    },
     "meta": {
       "type": "component",
       "repeatable": true,
       "component": "home.meta"
     },
-    "buttonLink": {
+    "address": {
+      "type": "component",
+      "repeatable": false,
+      "component": "nested.address"
+    },
+    "emails": {
+      "type": "component",
+      "repeatable": true,
+      "component": "nested.emails"
+    },
+    "phoneNumbers": {
+      "type": "component",
+      "repeatable": true,
+      "component": "nested.phone-numbers"
+    },
+    "title": {
       "type": "string"
+    },
+    "description": {
+      "type": "text"
     }
   }
 }
