@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "07/16/2020 4:18:13 AM"
+    "x-generation-date": "07/16/2020 3:14:59 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -9908,11 +9908,11 @@
                         "video": {
                           "type": "string"
                         },
-                        "category": {
-                          "type": "string"
-                        },
                         "coverImage": {
                           "type": "string"
+                        },
+                        "categories": {
+                          "type": "component"
                         }
                       }
                     }
@@ -10599,11 +10599,11 @@
                         "video": {
                           "type": "string"
                         },
-                        "category": {
-                          "type": "string"
-                        },
                         "coverImage": {
                           "type": "string"
+                        },
+                        "categories": {
+                          "type": "component"
                         }
                       }
                     }
@@ -11043,13 +11043,6 @@
               }
             }
           },
-          "category": {
-            "type": "string",
-            "enum": [
-              "Website",
-              "MobileApp"
-            ]
-          },
           "coverImage": {
             "required": [
               "id",
@@ -11110,6 +11103,26 @@
                 "type": "string"
               }
             }
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "categoryName": {
+                  "type": "string"
+                },
+                "categoryDescription": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -11133,12 +11146,25 @@
           "role": {
             "type": "string"
           },
-          "category": {
-            "type": "string",
-            "enum": [
-              "Website",
-              "MobileApp"
-            ]
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "categoryName": {
+                  "type": "string"
+                },
+                "categoryDescription": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },

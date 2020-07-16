@@ -754,11 +754,11 @@
                         "video": {
                           "type": "string"
                         },
-                        "category": {
-                          "type": "string"
-                        },
                         "coverImage": {
                           "type": "string"
+                        },
+                        "categories": {
+                          "type": "component"
                         }
                       }
                     }
@@ -1445,11 +1445,11 @@
                         "video": {
                           "type": "string"
                         },
-                        "category": {
-                          "type": "string"
-                        },
                         "coverImage": {
                           "type": "string"
+                        },
+                        "categories": {
+                          "type": "component"
                         }
                       }
                     }

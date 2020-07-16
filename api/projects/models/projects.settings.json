@@ -45,13 +45,6 @@
       "plugin": "upload",
       "required": false
     },
-    "category": {
-      "type": "enumeration",
-      "enum": [
-        "Website",
-        "MobileApp"
-      ]
-    },
     "coverImage": {
       "model": "file",
       "via": "related",
@@ -60,6 +53,11 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "categories": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blog.blog-categories"
     }
   }
 }

@@ -700,13 +700,6 @@
               }
             }
           },
-          "category": {
-            "type": "string",
-            "enum": [
-              "Website",
-              "MobileApp"
-            ]
-          },
           "coverImage": {
             "required": [
               "id",
@@ -767,6 +760,26 @@
                 "type": "string"
               }
             }
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "categoryName": {
+                  "type": "string"
+                },
+                "categoryDescription": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -790,12 +803,25 @@
           "role": {
             "type": "string"
           },
-          "category": {
-            "type": "string",
-            "enum": [
-              "Website",
-              "MobileApp"
-            ]
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "categoryName": {
+                  "type": "string"
+                },
+                "categoryDescription": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       }
