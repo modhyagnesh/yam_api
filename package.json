@@ -24,11 +24,7 @@
     "strapi-plugin-upload": "3.0.2",
     "strapi-plugin-users-permissions": "3.0.2",
     "strapi-provider-upload-cloudinary": "^3.0.5",
-    "strapi-utils": "3.0.2",
-    "undici": "^4.16.0"
-  },
-  "resolutions": {
-    "undici": "^4.16.0"
+    "strapi-utils": "3.0.2"
   },
   "author": {
     "name": "A Strapi developer"
@@ -40,10 +36,5 @@
     "node": ">=10.16.0 <=14.x.x",
     "npm": ">=6.0.0"
   },
-  "license": "MIT",
-  "overrides": {
-    "undici": "^4.16.0",
-    "parse5": "^6.0.1",
-    "parse5-htmlparser2-tree-adapter": "^6.0.1"
-  }
+  "license": "MIT"
 }
