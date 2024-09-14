@@ -257,7 +257,7 @@
     "/skills/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of skills documents",
+        "description": "Retrieve the number of skills documents",
         "responses": {
           "200": {
             "description": "Retrieve skills document(s)",
@@ -586,6 +586,12 @@
               },
               "related": {
                 "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -603,6 +609,12 @@
             "type": "number"
           },
           "link": {
+            "type": "string"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
             "type": "string"
           }
         }

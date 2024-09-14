@@ -257,7 +257,7 @@
     "/achievements/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of achievements documents",
+        "description": "Retrieve the number of achievements documents",
         "responses": {
           "200": {
             "description": "Retrieve achievements document(s)",
@@ -530,6 +530,12 @@
       "NewAchievements": {
         "properties": {
           "text": {
+            "type": "string"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
             "type": "string"
           }
         }

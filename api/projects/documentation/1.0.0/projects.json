@@ -257,7 +257,7 @@
     "/projects/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of projects documents",
+        "description": "Retrieve the number of projects documents",
         "responses": {
           "200": {
             "description": "Retrieve projects document(s)",
@@ -541,28 +541,43 @@
               },
               "link": {
                 "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
           "skills": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "ratting": {
-                "type": "number"
-              },
-              "logo": {
-                "type": "string"
-              },
-              "link": {
-                "type": "string"
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "ratting": {
+                  "type": "number"
+                },
+                "logo": {
+                  "type": "string"
+                },
+                "link": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -635,6 +650,12 @@
                 },
                 "related": {
                   "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
                 }
               }
             }
@@ -697,6 +718,12 @@
               },
               "related": {
                 "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -758,6 +785,12 @@
               },
               "related": {
                 "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -792,7 +825,10 @@
             "type": "string"
           },
           "skills": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "Description": {
             "type": "string"
@@ -822,6 +858,12 @@
                 }
               }
             }
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
           }
         }
       }

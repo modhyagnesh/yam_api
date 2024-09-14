@@ -262,7 +262,7 @@
     "/education-details/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of education-details documents",
+        "description": "Retrieve the number of education-details documents",
         "responses": {
           "200": {
             "description": "Retrieve education-details document(s)",
@@ -542,10 +542,12 @@
             "type": "string"
           },
           "startDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "endDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "grade": {
             "type": "string"
@@ -614,6 +616,12 @@
               },
               "related": {
                 "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -631,10 +639,12 @@
             "type": "string"
           },
           "startDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "endDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "grade": {
             "type": "string"
@@ -646,6 +656,12 @@
             "type": "string"
           },
           "school": {
+            "type": "string"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
             "type": "string"
           }
         }

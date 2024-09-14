@@ -558,36 +558,53 @@
               },
               "link": {
                 "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
           "skills": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "ratting": {
-                "type": "number"
-              },
-              "logo": {
-                "type": "string"
-              },
-              "link": {
-                "type": "string"
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "ratting": {
+                  "type": "number"
+                },
+                "logo": {
+                  "type": "string"
+                },
+                "link": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
               }
             }
           },
           "startDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "endDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "totalHours": {
             "type": "integer"
@@ -607,16 +624,27 @@
             "type": "string"
           },
           "skills": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "startDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "endDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "totalHours": {
             "type": "integer"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
           }
         }
       }

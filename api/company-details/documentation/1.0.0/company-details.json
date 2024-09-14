@@ -262,7 +262,7 @@
     "/company-details/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of company-details documents",
+        "description": "Retrieve the number of company-details documents",
         "responses": {
           "200": {
             "description": "Retrieve company-details document(s)",
@@ -596,6 +596,12 @@
               },
               "related": {
                 "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -610,6 +616,12 @@
             "type": "string"
           },
           "link": {
+            "type": "string"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
             "type": "string"
           }
         }

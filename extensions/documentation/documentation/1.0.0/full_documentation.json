@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "07/16/2020 3:14:59 PM"
+    "x-generation-date": "09/14/2024 12:24:54 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -37,7 +37,7 @@
   ],
   "externalDocs": {
     "description": "Find out more",
-    "url": "https://strapi.io/documentation/v3.x/"
+    "url": "https://strapi.io/documentation/developer-docs/latest/getting-started/introduction.html"
   },
   "security": [
     {
@@ -302,7 +302,7 @@
     "/achievements/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of achievements documents",
+        "description": "Retrieve the number of achievements documents",
         "responses": {
           "200": {
             "description": "Retrieve achievements document(s)",
@@ -813,7 +813,7 @@
     "/blogs/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of blogs documents",
+        "description": "Retrieve the number of blogs documents",
         "responses": {
           "200": {
             "description": "Retrieve blogs document(s)",
@@ -1840,7 +1840,7 @@
     "/company-details/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of company-details documents",
+        "description": "Retrieve the number of company-details documents",
         "responses": {
           "200": {
             "description": "Retrieve company-details document(s)",
@@ -3187,7 +3187,7 @@
     "/education-details/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of education-details documents",
+        "description": "Retrieve the number of education-details documents",
         "responses": {
           "200": {
             "description": "Retrieve education-details document(s)",
@@ -4325,7 +4325,7 @@
     "/projects/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of projects documents",
+        "description": "Retrieve the number of projects documents",
         "responses": {
           "200": {
             "description": "Retrieve projects document(s)",
@@ -5148,7 +5148,7 @@
     "/skills/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of skills documents",
+        "description": "Retrieve the number of skills documents",
         "responses": {
           "200": {
             "description": "Retrieve skills document(s)",
@@ -6521,6 +6521,134 @@
         }
       }
     },
+    "/email/test": {
+      "post": {
+        "deprecated": false,
+        "description": "Send an test email",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Email - Email"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "foo": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/email/settings": {
+      "get": {
+        "deprecated": false,
+        "description": "Get the email settings",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Email - Email"
+        ],
+        "parameters": []
+      }
+    },
     "/upload/": {
       "post": {
         "deprecated": false,
@@ -6906,63 +7034,6 @@
             }
           }
         ]
-      }
-    },
-    "/users-permissions/init": {
-      "get": {
-        "deprecated": false,
-        "description": "Check if the first admin user has already been registered",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "UsersPermissions - Role"
-        ],
-        "parameters": []
       }
     },
     "/users-permissions/roles/{id}": {
@@ -8625,6 +8696,12 @@
         "properties": {
           "text": {
             "type": "string"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
           }
         }
       },
@@ -8700,6 +8777,12 @@
               },
               "related": {
                 "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -8735,6 +8818,12 @@
                 "type": "boolean"
               },
               "role": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
                 "type": "string"
               }
             }
@@ -8797,6 +8886,12 @@
                 }
               }
             }
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
           }
         }
       },
@@ -8827,14 +8922,22 @@
               },
               "link": {
                 "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
           "issueDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "expirationDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "neverExpire": {
             "type": "boolean"
@@ -8856,10 +8959,12 @@
             "type": "string"
           },
           "issueDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "expirationDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "neverExpire": {
             "type": "boolean"
@@ -8868,6 +8973,12 @@
             "type": "string"
           },
           "credentialUrl": {
+            "type": "string"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
             "type": "string"
           }
         }
@@ -8941,6 +9052,12 @@
               },
               "related": {
                 "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -8955,6 +9072,12 @@
             "type": "string"
           },
           "link": {
+            "type": "string"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
             "type": "string"
           }
         }
@@ -9024,6 +9147,12 @@
                 "type": "object"
               },
               "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
                 "type": "string"
               }
             }
@@ -9227,6 +9356,12 @@
           },
           "description": {
             "type": "string"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
           }
         }
       },
@@ -9271,6 +9406,12 @@
           },
           "description": {
             "type": "string"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
           }
         }
       },
@@ -9289,10 +9430,12 @@
             "type": "string"
           },
           "startDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "endDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "grade": {
             "type": "string"
@@ -9361,6 +9504,12 @@
               },
               "related": {
                 "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -9378,10 +9527,12 @@
             "type": "string"
           },
           "startDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "endDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "grade": {
             "type": "string"
@@ -9393,6 +9544,12 @@
             "type": "string"
           },
           "school": {
+            "type": "string"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
             "type": "string"
           }
         }
@@ -9465,6 +9622,12 @@
             }
           },
           "copyrightText": {
+            "type": "string"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
             "type": "string"
           }
         }
@@ -9551,6 +9714,12 @@
                   },
                   "related": {
                     "type": "string"
+                  },
+                  "created_by": {
+                    "type": "string"
+                  },
+                  "updated_by": {
+                    "type": "string"
                   }
                 }
               },
@@ -9632,6 +9801,12 @@
                     "type": "object"
                   },
                   "related": {
+                    "type": "string"
+                  },
+                  "created_by": {
+                    "type": "string"
+                  },
+                  "updated_by": {
                     "type": "string"
                   }
                 }
@@ -9718,24 +9893,33 @@
                       "type": "string"
                     },
                     "skills": {
-                      "required": [
-                        "id"
-                      ],
-                      "properties": {
-                        "id": {
-                          "type": "string"
-                        },
-                        "name": {
-                          "type": "string"
-                        },
-                        "ratting": {
-                          "type": "number"
-                        },
-                        "logo": {
-                          "type": "string"
-                        },
-                        "link": {
-                          "type": "string"
+                      "type": "array",
+                      "items": {
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "ratting": {
+                            "type": "number"
+                          },
+                          "logo": {
+                            "type": "string"
+                          },
+                          "link": {
+                            "type": "string"
+                          },
+                          "created_by": {
+                            "type": "string"
+                          },
+                          "updated_by": {
+                            "type": "string"
+                          }
                         }
                       }
                     }
@@ -9842,6 +10026,12 @@
                               },
                               "related": {
                                 "type": "string"
+                              },
+                              "created_by": {
+                                "type": "string"
+                              },
+                              "updated_by": {
+                                "type": "string"
                               }
                             }
                           }
@@ -9874,45 +10064,57 @@
                       "type": "string"
                     },
                     "projects": {
-                      "required": [
-                        "id"
-                      ],
-                      "properties": {
-                        "id": {
-                          "type": "string"
-                        },
-                        "projectName": {
-                          "type": "string"
-                        },
-                        "company_detail": {
-                          "type": "string"
-                        },
-                        "skills": {
-                          "type": "string"
-                        },
-                        "Description": {
-                          "type": "string"
-                        },
-                        "link": {
-                          "type": "string"
-                        },
-                        "role": {
-                          "type": "string"
-                        },
-                        "images": {
-                          "type": "array",
-                          "items": {
+                      "type": "array",
+                      "items": {
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "projectName": {
+                            "type": "string"
+                          },
+                          "company_detail": {
+                            "type": "string"
+                          },
+                          "skills": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "Description": {
+                            "type": "string"
+                          },
+                          "link": {
+                            "type": "string"
+                          },
+                          "role": {
+                            "type": "string"
+                          },
+                          "images": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "video": {
+                            "type": "string"
+                          },
+                          "coverImage": {
+                            "type": "string"
+                          },
+                          "categories": {
+                            "type": "component"
+                          },
+                          "created_by": {
+                            "type": "string"
+                          },
+                          "updated_by": {
                             "type": "string"
                           }
-                        },
-                        "video": {
-                          "type": "string"
-                        },
-                        "coverImage": {
-                          "type": "string"
-                        },
-                        "categories": {
-                          "type": "component"
                         }
                       }
                     }
@@ -10018,6 +10220,12 @@
                                 "type": "object"
                               },
                               "related": {
+                                "type": "string"
+                              },
+                              "created_by": {
+                                "type": "string"
+                              },
+                              "updated_by": {
                                 "type": "string"
                               }
                             }
@@ -10135,30 +10343,39 @@
                 "type": "string"
               },
               "blogs": {
-                "required": [
-                  "id"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "Title": {
-                    "type": "string"
-                  },
-                  "description": {
-                    "type": "string"
-                  },
-                  "image": {
-                    "type": "string"
-                  },
-                  "user": {
-                    "type": "string"
-                  },
-                  "content": {
-                    "type": "string"
-                  },
-                  "categories": {
-                    "type": "component"
+                "type": "array",
+                "items": {
+                  "required": [
+                    "id"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "Title": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "image": {
+                      "type": "string"
+                    },
+                    "user": {
+                      "type": "string"
+                    },
+                    "content": {
+                      "type": "string"
+                    },
+                    "categories": {
+                      "type": "component"
+                    },
+                    "created_by": {
+                      "type": "string"
+                    },
+                    "updated_by": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -10242,6 +10459,12 @@
                   },
                   "related": {
                     "type": "string"
+                  },
+                  "created_by": {
+                    "type": "string"
+                  },
+                  "updated_by": {
+                    "type": "string"
                   }
                 }
               },
@@ -10323,6 +10546,12 @@
                     "type": "object"
                   },
                   "related": {
+                    "type": "string"
+                  },
+                  "created_by": {
+                    "type": "string"
+                  },
+                  "updated_by": {
                     "type": "string"
                   }
                 }
@@ -10409,24 +10638,33 @@
                       "type": "string"
                     },
                     "skills": {
-                      "required": [
-                        "id"
-                      ],
-                      "properties": {
-                        "id": {
-                          "type": "string"
-                        },
-                        "name": {
-                          "type": "string"
-                        },
-                        "ratting": {
-                          "type": "number"
-                        },
-                        "logo": {
-                          "type": "string"
-                        },
-                        "link": {
-                          "type": "string"
+                      "type": "array",
+                      "items": {
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "ratting": {
+                            "type": "number"
+                          },
+                          "logo": {
+                            "type": "string"
+                          },
+                          "link": {
+                            "type": "string"
+                          },
+                          "created_by": {
+                            "type": "string"
+                          },
+                          "updated_by": {
+                            "type": "string"
+                          }
                         }
                       }
                     }
@@ -10533,6 +10771,12 @@
                               },
                               "related": {
                                 "type": "string"
+                              },
+                              "created_by": {
+                                "type": "string"
+                              },
+                              "updated_by": {
+                                "type": "string"
                               }
                             }
                           }
@@ -10565,45 +10809,57 @@
                       "type": "string"
                     },
                     "projects": {
-                      "required": [
-                        "id"
-                      ],
-                      "properties": {
-                        "id": {
-                          "type": "string"
-                        },
-                        "projectName": {
-                          "type": "string"
-                        },
-                        "company_detail": {
-                          "type": "string"
-                        },
-                        "skills": {
-                          "type": "string"
-                        },
-                        "Description": {
-                          "type": "string"
-                        },
-                        "link": {
-                          "type": "string"
-                        },
-                        "role": {
-                          "type": "string"
-                        },
-                        "images": {
-                          "type": "array",
-                          "items": {
+                      "type": "array",
+                      "items": {
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "projectName": {
+                            "type": "string"
+                          },
+                          "company_detail": {
+                            "type": "string"
+                          },
+                          "skills": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "Description": {
+                            "type": "string"
+                          },
+                          "link": {
+                            "type": "string"
+                          },
+                          "role": {
+                            "type": "string"
+                          },
+                          "images": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "video": {
+                            "type": "string"
+                          },
+                          "coverImage": {
+                            "type": "string"
+                          },
+                          "categories": {
+                            "type": "component"
+                          },
+                          "created_by": {
+                            "type": "string"
+                          },
+                          "updated_by": {
                             "type": "string"
                           }
-                        },
-                        "video": {
-                          "type": "string"
-                        },
-                        "coverImage": {
-                          "type": "string"
-                        },
-                        "categories": {
-                          "type": "component"
                         }
                       }
                     }
@@ -10709,6 +10965,12 @@
                                 "type": "object"
                               },
                               "related": {
+                                "type": "string"
+                              },
+                              "created_by": {
+                                "type": "string"
+                              },
+                              "updated_by": {
                                 "type": "string"
                               }
                             }
@@ -10826,34 +11088,49 @@
                 "type": "string"
               },
               "blogs": {
-                "required": [
-                  "id"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "Title": {
-                    "type": "string"
-                  },
-                  "description": {
-                    "type": "string"
-                  },
-                  "image": {
-                    "type": "string"
-                  },
-                  "user": {
-                    "type": "string"
-                  },
-                  "content": {
-                    "type": "string"
-                  },
-                  "categories": {
-                    "type": "component"
+                "type": "array",
+                "items": {
+                  "required": [
+                    "id"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "Title": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "image": {
+                      "type": "string"
+                    },
+                    "user": {
+                      "type": "string"
+                    },
+                    "content": {
+                      "type": "string"
+                    },
+                    "categories": {
+                      "type": "component"
+                    },
+                    "created_by": {
+                      "type": "string"
+                    },
+                    "updated_by": {
+                      "type": "string"
+                    }
                   }
                 }
               }
             }
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
           }
         }
       },
@@ -10884,28 +11161,43 @@
               },
               "link": {
                 "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
           "skills": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "ratting": {
-                "type": "number"
-              },
-              "logo": {
-                "type": "string"
-              },
-              "link": {
-                "type": "string"
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "ratting": {
+                  "type": "number"
+                },
+                "logo": {
+                  "type": "string"
+                },
+                "link": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -10978,6 +11270,12 @@
                 },
                 "related": {
                   "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
                 }
               }
             }
@@ -11040,6 +11338,12 @@
               },
               "related": {
                 "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -11101,6 +11405,12 @@
               },
               "related": {
                 "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -11135,7 +11445,10 @@
             "type": "string"
           },
           "skills": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "Description": {
             "type": "string"
@@ -11165,6 +11478,12 @@
                 }
               }
             }
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
           }
         }
       },
@@ -11234,6 +11553,12 @@
               },
               "related": {
                 "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -11301,6 +11626,12 @@
               },
               "related": {
                 "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -11358,6 +11689,12 @@
             }
           },
           "buttonLink": {
+            "type": "string"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
             "type": "string"
           }
         }
@@ -11434,6 +11771,12 @@
               },
               "related": {
                 "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -11451,6 +11794,12 @@
             "type": "number"
           },
           "link": {
+            "type": "string"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
             "type": "string"
           }
         }
@@ -11486,36 +11835,53 @@
               },
               "link": {
                 "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
           "skills": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "ratting": {
-                "type": "number"
-              },
-              "logo": {
-                "type": "string"
-              },
-              "link": {
-                "type": "string"
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "ratting": {
+                  "type": "number"
+                },
+                "logo": {
+                  "type": "string"
+                },
+                "link": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
               }
             }
           },
           "startDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "endDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "totalHours": {
             "type": "integer"
@@ -11535,16 +11901,27 @@
             "type": "string"
           },
           "skills": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "startDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "endDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "totalHours": {
             "type": "integer"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
           }
         }
       },
@@ -11576,10 +11953,12 @@
             "type": "boolean"
           },
           "startDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "endDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "description": {
             "type": "string"
@@ -11599,6 +11978,12 @@
                 "type": "string"
               },
               "link": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
                 "type": "string"
               }
             }
@@ -11627,15 +12012,23 @@
             "type": "boolean"
           },
           "startDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "endDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "description": {
             "type": "string"
           },
           "company": {
+            "type": "string"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
             "type": "string"
           }
         }
@@ -11690,6 +12083,12 @@
                 },
                 "role": {
                   "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
                 }
               }
             }
@@ -11729,6 +12128,12 @@
                 },
                 "role": {
                   "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
                 }
               }
             }
@@ -11761,6 +12166,12 @@
             "items": {
               "type": "string"
             }
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
           }
         }
       },
@@ -11822,6 +12233,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           }
@@ -11846,6 +12263,7 @@
           },
           "password": {
             "type": "string",
+            "format": "password",
             "minLength": 6
           },
           "resetPasswordToken": {
@@ -11860,6 +12278,12 @@
             "default": false
           },
           "role": {
+            "type": "string"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
             "type": "string"
           }
         }

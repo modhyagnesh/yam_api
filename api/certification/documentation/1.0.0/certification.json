@@ -541,14 +541,22 @@
               },
               "link": {
                 "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
           "issueDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "expirationDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "neverExpire": {
             "type": "boolean"
@@ -570,10 +578,12 @@
             "type": "string"
           },
           "issueDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "expirationDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "neverExpire": {
             "type": "boolean"
@@ -582,6 +592,12 @@
             "type": "string"
           },
           "credentialUrl": {
+            "type": "string"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
             "type": "string"
           }
         }

@@ -257,7 +257,7 @@
     "/blogs/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of blogs documents",
+        "description": "Retrieve the number of blogs documents",
         "responses": {
           "200": {
             "description": "Retrieve blogs document(s)",
@@ -586,6 +586,12 @@
               },
               "related": {
                 "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -621,6 +627,12 @@
                 "type": "boolean"
               },
               "role": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
                 "type": "string"
               }
             }
@@ -683,6 +695,12 @@
                 }
               }
             }
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
           }
         }
       }

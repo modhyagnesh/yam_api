@@ -397,6 +397,12 @@
                   },
                   "related": {
                     "type": "string"
+                  },
+                  "created_by": {
+                    "type": "string"
+                  },
+                  "updated_by": {
+                    "type": "string"
                   }
                 }
               },
@@ -478,6 +484,12 @@
                     "type": "object"
                   },
                   "related": {
+                    "type": "string"
+                  },
+                  "created_by": {
+                    "type": "string"
+                  },
+                  "updated_by": {
                     "type": "string"
                   }
                 }
@@ -564,24 +576,33 @@
                       "type": "string"
                     },
                     "skills": {
-                      "required": [
-                        "id"
-                      ],
-                      "properties": {
-                        "id": {
-                          "type": "string"
-                        },
-                        "name": {
-                          "type": "string"
-                        },
-                        "ratting": {
-                          "type": "number"
-                        },
-                        "logo": {
-                          "type": "string"
-                        },
-                        "link": {
-                          "type": "string"
+                      "type": "array",
+                      "items": {
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "ratting": {
+                            "type": "number"
+                          },
+                          "logo": {
+                            "type": "string"
+                          },
+                          "link": {
+                            "type": "string"
+                          },
+                          "created_by": {
+                            "type": "string"
+                          },
+                          "updated_by": {
+                            "type": "string"
+                          }
                         }
                       }
                     }
@@ -688,6 +709,12 @@
                               },
                               "related": {
                                 "type": "string"
+                              },
+                              "created_by": {
+                                "type": "string"
+                              },
+                              "updated_by": {
+                                "type": "string"
                               }
                             }
                           }
@@ -720,45 +747,57 @@
                       "type": "string"
                     },
                     "projects": {
-                      "required": [
-                        "id"
-                      ],
-                      "properties": {
-                        "id": {
-                          "type": "string"
-                        },
-                        "projectName": {
-                          "type": "string"
-                        },
-                        "company_detail": {
-                          "type": "string"
-                        },
-                        "skills": {
-                          "type": "string"
-                        },
-                        "Description": {
-                          "type": "string"
-                        },
-                        "link": {
-                          "type": "string"
-                        },
-                        "role": {
-                          "type": "string"
-                        },
-                        "images": {
-                          "type": "array",
-                          "items": {
+                      "type": "array",
+                      "items": {
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "projectName": {
+                            "type": "string"
+                          },
+                          "company_detail": {
+                            "type": "string"
+                          },
+                          "skills": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "Description": {
+                            "type": "string"
+                          },
+                          "link": {
+                            "type": "string"
+                          },
+                          "role": {
+                            "type": "string"
+                          },
+                          "images": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "video": {
+                            "type": "string"
+                          },
+                          "coverImage": {
+                            "type": "string"
+                          },
+                          "categories": {
+                            "type": "component"
+                          },
+                          "created_by": {
+                            "type": "string"
+                          },
+                          "updated_by": {
                             "type": "string"
                           }
-                        },
-                        "video": {
-                          "type": "string"
-                        },
-                        "coverImage": {
-                          "type": "string"
-                        },
-                        "categories": {
-                          "type": "component"
                         }
                       }
                     }
@@ -864,6 +903,12 @@
                                 "type": "object"
                               },
                               "related": {
+                                "type": "string"
+                              },
+                              "created_by": {
+                                "type": "string"
+                              },
+                              "updated_by": {
                                 "type": "string"
                               }
                             }
@@ -981,30 +1026,39 @@
                 "type": "string"
               },
               "blogs": {
-                "required": [
-                  "id"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "Title": {
-                    "type": "string"
-                  },
-                  "description": {
-                    "type": "string"
-                  },
-                  "image": {
-                    "type": "string"
-                  },
-                  "user": {
-                    "type": "string"
-                  },
-                  "content": {
-                    "type": "string"
-                  },
-                  "categories": {
-                    "type": "component"
+                "type": "array",
+                "items": {
+                  "required": [
+                    "id"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "Title": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "image": {
+                      "type": "string"
+                    },
+                    "user": {
+                      "type": "string"
+                    },
+                    "content": {
+                      "type": "string"
+                    },
+                    "categories": {
+                      "type": "component"
+                    },
+                    "created_by": {
+                      "type": "string"
+                    },
+                    "updated_by": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -1088,6 +1142,12 @@
                   },
                   "related": {
                     "type": "string"
+                  },
+                  "created_by": {
+                    "type": "string"
+                  },
+                  "updated_by": {
+                    "type": "string"
                   }
                 }
               },
@@ -1169,6 +1229,12 @@
                     "type": "object"
                   },
                   "related": {
+                    "type": "string"
+                  },
+                  "created_by": {
+                    "type": "string"
+                  },
+                  "updated_by": {
                     "type": "string"
                   }
                 }
@@ -1255,24 +1321,33 @@
                       "type": "string"
                     },
                     "skills": {
-                      "required": [
-                        "id"
-                      ],
-                      "properties": {
-                        "id": {
-                          "type": "string"
-                        },
-                        "name": {
-                          "type": "string"
-                        },
-                        "ratting": {
-                          "type": "number"
-                        },
-                        "logo": {
-                          "type": "string"
-                        },
-                        "link": {
-                          "type": "string"
+                      "type": "array",
+                      "items": {
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "ratting": {
+                            "type": "number"
+                          },
+                          "logo": {
+                            "type": "string"
+                          },
+                          "link": {
+                            "type": "string"
+                          },
+                          "created_by": {
+                            "type": "string"
+                          },
+                          "updated_by": {
+                            "type": "string"
+                          }
                         }
                       }
                     }
@@ -1379,6 +1454,12 @@
                               },
                               "related": {
                                 "type": "string"
+                              },
+                              "created_by": {
+                                "type": "string"
+                              },
+                              "updated_by": {
+                                "type": "string"
                               }
                             }
                           }
@@ -1411,45 +1492,57 @@
                       "type": "string"
                     },
                     "projects": {
-                      "required": [
-                        "id"
-                      ],
-                      "properties": {
-                        "id": {
-                          "type": "string"
-                        },
-                        "projectName": {
-                          "type": "string"
-                        },
-                        "company_detail": {
-                          "type": "string"
-                        },
-                        "skills": {
-                          "type": "string"
-                        },
-                        "Description": {
-                          "type": "string"
-                        },
-                        "link": {
-                          "type": "string"
-                        },
-                        "role": {
-                          "type": "string"
-                        },
-                        "images": {
-                          "type": "array",
-                          "items": {
+                      "type": "array",
+                      "items": {
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "projectName": {
+                            "type": "string"
+                          },
+                          "company_detail": {
+                            "type": "string"
+                          },
+                          "skills": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "Description": {
+                            "type": "string"
+                          },
+                          "link": {
+                            "type": "string"
+                          },
+                          "role": {
+                            "type": "string"
+                          },
+                          "images": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "video": {
+                            "type": "string"
+                          },
+                          "coverImage": {
+                            "type": "string"
+                          },
+                          "categories": {
+                            "type": "component"
+                          },
+                          "created_by": {
+                            "type": "string"
+                          },
+                          "updated_by": {
                             "type": "string"
                           }
-                        },
-                        "video": {
-                          "type": "string"
-                        },
-                        "coverImage": {
-                          "type": "string"
-                        },
-                        "categories": {
-                          "type": "component"
                         }
                       }
                     }
@@ -1555,6 +1648,12 @@
                                 "type": "object"
                               },
                               "related": {
+                                "type": "string"
+                              },
+                              "created_by": {
+                                "type": "string"
+                              },
+                              "updated_by": {
                                 "type": "string"
                               }
                             }
@@ -1672,34 +1771,49 @@
                 "type": "string"
               },
               "blogs": {
-                "required": [
-                  "id"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "Title": {
-                    "type": "string"
-                  },
-                  "description": {
-                    "type": "string"
-                  },
-                  "image": {
-                    "type": "string"
-                  },
-                  "user": {
-                    "type": "string"
-                  },
-                  "content": {
-                    "type": "string"
-                  },
-                  "categories": {
-                    "type": "component"
+                "type": "array",
+                "items": {
+                  "required": [
+                    "id"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "Title": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "image": {
+                      "type": "string"
+                    },
+                    "user": {
+                      "type": "string"
+                    },
+                    "content": {
+                      "type": "string"
+                    },
+                    "categories": {
+                      "type": "component"
+                    },
+                    "created_by": {
+                      "type": "string"
+                    },
+                    "updated_by": {
+                      "type": "string"
+                    }
                   }
                 }
               }
             }
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
           }
         }
       }

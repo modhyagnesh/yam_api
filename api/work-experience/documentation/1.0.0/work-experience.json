@@ -555,10 +555,12 @@
             "type": "boolean"
           },
           "startDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "endDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "description": {
             "type": "string"
@@ -578,6 +580,12 @@
                 "type": "string"
               },
               "link": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
                 "type": "string"
               }
             }
@@ -606,15 +614,23 @@
             "type": "boolean"
           },
           "startDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "endDate": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "description": {
             "type": "string"
           },
           "company": {
+            "type": "string"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
             "type": "string"
           }
         }
