@@ -5,7 +5,9 @@ WORKDIR /app
 COPY package.json package-lock.json* yarn.lock* ./
  
 RUN npm install --production
- 
+
+RUN npm run build
+
 COPY . .
  
 ENV NODE_ENV=production
